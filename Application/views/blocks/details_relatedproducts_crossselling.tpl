@@ -1,0 +1,12 @@
+[{$smarty.block.parent}]
+
+[{block name="pcbrandproducts_related_products"}]
+    [{assign var="brandProducts" value=$oDetailsProduct->getPcBrandProducts()}]
+    [{if $brandProducts}]
+        [{capture append="oxidBlock_productbar"}]
+            [{assign var="oManufacturer" value=$oView->getManufacturer()}]
+            [{assign var="brandProductsTitle" value="PCBRANDPRODUCTS_TITLE"|oxmultilangassign|cat:$oManufacturer->oxmanufacturers__oxtitle->value}]
+            [{include file="widget/product/list.tpl" type="grid" listId="cross" products=$brandProducts head=$brandProductsTitle}]
+        [{/capture}]
+    [{/if}]
+[{/block}]

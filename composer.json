@@ -1,0 +1,33 @@
+{
+  "name": "proudcommerce/brandproducts",
+  "version": "1.0.0",
+  "description": "Products of the same brand (crossselling) on article details page.",
+  "type": "oxideshop-module",
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "authors": [
+    {
+      "name": "ProudCommerce",
+      "homepage": "https://www.proudcommerce.com/",
+      "email": "welcome@proudcommerce.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@proudcommerce.com"
+  },
+  "require": {
+    "php": ">= 5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProudCommerce\\BrandProducts\\": "../../../source/modules/pc/brandproducts"
+    }
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "pc/brandproducts"
+    }
+  }
+}
